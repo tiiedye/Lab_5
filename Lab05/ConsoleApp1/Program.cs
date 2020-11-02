@@ -1,4 +1,5 @@
 ﻿using System;
+
 namespace ConsoleApp1
 {
     class Program
@@ -7,6 +8,7 @@ namespace ConsoleApp1
         {
             int a = 0;
             int b = 1;
+
             for (int i = 0; i < n; i++)
             {
                 int temp = a;
@@ -15,11 +17,15 @@ namespace ConsoleApp1
             }
             return a;
         }
+
         static void Main()
         {
+            System.Diagnostics.Debug.Write("Entering Main() method");
+
             for (int i = 0; i < 25; i++)
             {
                 Console.Write(Fibonacci(i));
+                var fib = Fibonacci(i);
                 Console.Write(", ");
             }
             Console.ReadKey();
